@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reinis Emīls Aļļis - CV</title>
+    <title>Reinis Emīls Aļļis - CV (Exp V2 – Promoted Chip)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -76,24 +76,6 @@
         line-height: 1.45;
       }
 
-      .awards {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        align-items: flex-end;
-      }
-
-      .badge {
-        font-size: 11px;
-        border: 1px solid #dce5ff;
-        background: var(--accent-soft);
-        color: #1f4ec3;
-        border-radius: 999px;
-        padding: 5px 10px;
-        font-weight: 700;
-        white-space: nowrap;
-      }
-
       .contact {
         display: flex;
         flex-wrap: wrap;
@@ -148,12 +130,7 @@
         margin: 0;
       }
 
-      .text {
-        font-size: 12.3px;
-        line-height: 1.5;
-        color: #1f2937;
-      }
-
+      /* ── Role header row ── */
       .role {
         margin-top: 5px;
         font-size: 13px;
@@ -173,6 +150,7 @@
         padding-left: 8px;
         font-weight: 500;
         color: #3a4f6e;
+        font-size: 12px;
       }
 
       .role .location,
@@ -194,14 +172,6 @@
         color: #2a3b56;
       }
 
-      .meta {
-        font-size: 11.3px;
-        color: #5a667b;
-        margin-top: 3px;
-        margin-bottom: 6px;
-        font-weight: 600;
-      }
-
       ul {
         margin: 0;
         padding-left: 17px;
@@ -212,6 +182,50 @@
         font-size: 12px;
         line-height: 1.42;
         color: #1e2a3b;
+      }
+
+      /* ── Promoted divider ── */
+      .promoted-divider {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 10px 0 8px;
+      }
+
+      .promoted-divider::before,
+      .promoted-divider::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: #d4dff2;
+      }
+
+      .promoted-chip {
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        color: #0d7a5f;
+        background: #e6f7f2;
+        border: 1px solid #9ee0cc;
+        border-radius: 999px;
+        padding: 3px 9px;
+        white-space: nowrap;
+      }
+
+      /* ── Sub-role label (before the divider bullets) ── */
+      .sub-role {
+        font-size: 11.5px;
+        font-weight: 700;
+        color: #3a4f6e;
+        margin-bottom: 5px;
+      }
+
+      .sub-role .sub-dates {
+        font-weight: 500;
+        color: #5a6e8a;
+        font-size: 11px;
+        padding-left: 6px;
       }
 
       .stack-grid {
@@ -388,40 +402,54 @@
 
           <article class="card" style="margin-top: 10px">
             <h2 class="section-title">Experience</h2>
+
+            <!-- Single unified block, company + full date range on top -->
             <div class="role">
               Full Stack Engineer
               <span class="dates">Sep 2024 – Present</span>
-
               <div>
-                <span class="company">Libautech</span> <span class="sep">|</span>
+                <span class="company">Libautech</span>
+                <span class="sep">|</span>
                 <span class="location">Liepāja, Latvia (On-site)</span>
               </div>
             </div>
             <div class="stack-line">
               <strong>Stack:</strong> React, Next.js, Node.js, Express, MongoDB, Shopify, CI/CD
             </div>
+
+            <!-- Mid-level bullet group (most recent, shown first) -->
+            <div class="sub-role">Mid-level<span class="sub-dates">Mar 2025 – Present</span></div>
             <ul>
               <li>
-                Migrated and refactored 7 standalone apps, to a modern unified architecture to
-                improve performance and maintainability. Allowing the apps to qualify for "Built For
+                Migrated and refactored 7 standalone apps to a modern unified architecture,
+                improving performance and maintainability and qualifying them for "Built For
                 Shopify" standards.
               </li>
               <li>
-                Designed a workaround for Shopify’s customer facing bundle size limits (10KB →
-                100KB), allowing us to adopt Preact as a framework with a custom build pipeline to
-                avoid using native HTML/CSS/JS .
+                Designed a workaround for Shopify's customer-facing bundle size limits (10KB →
+                100KB), enabling Preact adoption with a custom build pipeline.
               </li>
               <li>
                 Set up Jenkins to deploy production from GitHub pushes to the prod branch;
                 maintained the pipeline and handled failures/debugging.
               </li>
+            </ul>
+
+            <!-- Promoted divider -->
+            <div class="promoted-divider">
+              <span class="promoted-chip">Promoted</span>
+            </div>
+
+            <!-- Junior bullet group -->
+            <div class="sub-role">Junior<span class="sub-dates">Sep 2024 – Mar 2025</span></div>
+            <ul>
               <li>
                 Documented the internal architecture and tooling so other devs could onboard and
                 contribute faster.
               </li>
               <li>
-                Documented the internal architecture and tooling so other devs could onboard and
-                contribute faster.
+                Contributed to initial feature delivery across multiple client Shopify projects,
+                building familiarity with the full stack in a production environment.
               </li>
             </ul>
           </article>
