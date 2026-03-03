@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reinis Emīls Aļļis - CV</title>
+  <style>
+    :root {
+      --bg: #f4f6fb;
+      --page: #ffffff;
+      --text: #121926;
+      --muted: #4c576a;
+      --soft: #e7ecf4;
+      --accent: #315dca;
+      --accent-soft: #eff3ff;
+      --good: #0d7a5f;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 14mm;
+      background: var(--page);
+    }
+
+    .header {
+      display: block;
+      padding: 14px 16px;
+      border: 1px solid var(--soft);
+      border-radius: 14px;
+      background: linear-gradient(135deg, #ffffff 0%, #f9fbff 100%);
+    }
+
+    .name {
+      margin: 0;
+      font-size: 32px;
+      letter-spacing: -0.6px;
+      line-height: 1.04;
+    }
+
+    .title {
+      margin-top: 6px;
+      font-size: 15px;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .tagline {
+      margin-top: 8px;
+      font-size: 12.5px;
+      color: var(--muted);
+      max-width: 620px;
+      line-height: 1.45;
+    }
+
+    .awards {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: flex-end;
+    }
+
+    .badge {
+      font-size: 11px;
+      border: 1px solid #dce5ff;
+      background: var(--accent-soft);
+      color: #1f4ec3;
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .chip {
+      font-size: 11px;
+      border: 1px solid var(--soft);
+      border-radius: 999px;
+      padding: 5px 9px;
+      color: #1f2a3d;
+      background: #fff;
+    }
+
+    .main {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: 1.58fr 0.92fr;
+      gap: 14px;
+    }
+
+    .card {
+      border: 1px solid var(--soft);
+      border-radius: 12px;
+      padding: 11px 12px;
+      background: #fff;
+      break-inside: avoid;
+    }
+
+    .section-title {
+      margin: 0 0 8px;
+      font-size: 11px;
+      color: var(--accent);
+      font-weight: 800;
+      letter-spacing: 0.9px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--soft);
+    }
+
+    p { margin: 0; }
+
+    .text {
+      font-size: 12.3px;
+      line-height: 1.5;
+      color: #1f2937;
+    }
+
+    .role {
+      margin-top: 5px;
+      font-size: 13.2px;
+      font-weight: 800;
+      color: #1b2434;
+      letter-spacing: 0.1px;
+    }
+
+    .meta {
+      font-size: 11.3px;
+      color: #5a667b;
+      margin-top: 3px;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 17px;
+    }
+
+    li {
+      margin-bottom: 4px;
+      font-size: 12px;
+      line-height: 1.42;
+      color: #1e2a3b;
+    }
+
+    .stack-grid {
+      display: grid;
+      gap: 3px;
+    }
+
+    .stack-row {
+      display: grid;
+      grid-template-columns: 82px 1fr;
+      gap: 8px;
+      align-items: start;
+      padding: 4px 0;
+      border-bottom: 1px dashed #dde6f2;
+    }
+
+    .stack-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .stack-label {
+      font-size: 10.3px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.55px;
+      color: #2a3b56;
+      line-height: 1.45;
+    }
+
+    .stack-values {
+      font-size: 11.4px;
+      line-height: 1.45;
+      color: #203049;
+      font-weight: 600;
+    }
+
+    .edu-item + .edu-item { margin-top: 8px; }
+
+    .edu-title {
+      font-size: 12.3px;
+      font-weight: 800;
+      color: #1b2434;
+      line-height: 1.35;
+    }
+
+    .small {
+      font-size: 11px;
+      line-height: 1.45;
+      color: #4f5d72;
+      margin-top: 2px;
+    }
+
+    .links a {
+      display: block;
+      color: #1f4ec3;
+      text-decoration: none;
+      font-size: 11.8px;
+      margin-bottom: 5px;
+      font-weight: 700;
+      word-break: break-word;
+    }
+
+    .links a:last-child { margin-bottom: 0; }
+
+    .lang-list {
+      display: grid;
+      gap: 6px;
+    }
+
+    .lang-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      font-size: 11.8px;
+    }
+
+    .lang-row strong { color: #1d2738; }
+    .lang-row span { color: #556379; }
+
+    .scan-list {
+      margin: 7px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 4px;
+    }
+
+    .scan-list li {
+      margin: 0;
+      font-size: 11.1px;
+      line-height: 1.32;
+      color: #1f2d41;
+      background: #f9fbff;
+      border: 1px solid #e3eaf5;
+      border-radius: 8px;
+      padding: 4px 6px;
+    }
+
+    .scan-list strong {
+      color: #1f4ec3;
+    }
+
+    .green {
+      color: var(--good);
+      font-weight: 800;
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { margin: 0; width: auto; min-height: auto; }
+      a { color: #1f4ec3 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div>
+        <h1 class="name">Reinis Emīls Aļļis</h1>
+        <div class="title">Junior Full Stack Engineer</div>
+        <p class="tagline">
+          1.7+ years building and shipping web products with React, Next.js, Node.js/Express,
+          plus practical Shopify and e-commerce implementation experience.
+        </p>
+        <div class="contact">
+          <span class="chip">Liepāja, Latvia</span>
+          <span class="chip">+371 25851571</span>
+          <span class="chip">reinisemilsa@gmail.com</span>
+        </div>
+      </div>
+
+    </header>
+
+    <div class="main">
+      <section>
+        <article class="card">
+          <h2 class="section-title">Quick Snapshot</h2>
+          <ul class="scan-list">
+            <li><strong>1.7+ years:</strong> Production web development across live client projects.</li>
+            <li><strong>Core stack:</strong> React, Next.js, Node.js/Express, MongoDB, and Shopify workflows.</li>
+            <li><strong>Delivery style:</strong> Own features end-to-end, from implementation through deployment support.</li>
+          </ul>
+        </article>
+
+        <article class="card" style="margin-top: 10px;">
+          <h2 class="section-title">Experience</h2>
+          <div class="role">Full Stack Engineer - Libautech</div>
+          <div class="meta">Sep 2024 - Present | Latvia (On-site)</div>
+          <ul>
+            <li><strong>Built:</strong> New web features and applications from requirements to release.</li>
+            <li><strong>Improved:</strong> Existing systems for performance, reliability, and maintainability.</li>
+            <li><strong>Delivered:</strong> Frontend implementation with React and Next.js.</li>
+            <li><strong>Contributed:</strong> Backend/API functionality using Node.js and Express.</li>
+            <li><strong>Supported:</strong> CI/CD pipelines and production server operations.</li>
+          </ul>
+        </article>
+
+        <article class="card" style="margin-top: 10px;">
+          <h2 class="section-title">Education</h2>
+          <div class="edu-item">
+            <div class="edu-title">Liepāja State Technical School - Programming Technician</div>
+            <div class="small">Sep 2021 - Jun 2025 | Final qualification exam: <span class="green">94%</span></div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-title">Accenture Bootcamp - Java / Software Engineering</div>
+            <div class="small">Jul 2023 - Aug 2023 | Java OOP, Spring basics, JUnit basics</div>
+          </div>
+        </article>
+
+        <article class="card" style="margin-top: 10px;">
+          <h2 class="section-title">Awards & Competition Highlights</h2>
+          <div class="edu-item">
+            <div class="edu-title">SkillsLatvia 2024 - Web Programming (3rd Place)</div>
+            <div class="small">Built a YouTube-style prototype in 2 days using Laravel + React. Delivered full-stack functionality under strict time constraints and ranked among the top national participants.</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-title">Liepāja Computer Science Olympiad (3rd Place)</div>
+            <div class="small">Led a 3-person team and delivered a complete project using Godot + C#, combining technical implementation with coordination and delivery ownership.</div>
+          </div>
+        </article>
+      </section>
+
+      <aside>
+        <article class="card">
+          <h2 class="section-title">Tech Stack</h2>
+          <div class="stack-grid">
+            <div class="stack-row">
+              <div class="stack-label">Frontend</div>
+              <div class="stack-values">React, Next.js, TypeScript, JavaScript, HTML, CSS</div>
+            </div>
+            <div class="stack-row">
+              <div class="stack-label">Backend</div>
+              <div class="stack-values">Node.js, Express.js, REST APIs, Java (basics), Spring Boot (basics)</div>
+            </div>
+            <div class="stack-row">
+              <div class="stack-label">Data</div>
+              <div class="stack-values">MongoDB, MySQL, SQL</div>
+            </div>
+            <div class="stack-row">
+              <div class="stack-label">DevOps</div>
+              <div class="stack-values">CI/CD pipelines, Linux server maintenance, deployment support</div>
+            </div>
+            <div class="stack-row">
+              <div class="stack-label">Product</div>
+              <div class="stack-values">Shopify ecosystem, e-commerce implementation, Git, Agile workflow</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" style="margin-top: 10px;">
+          <h2 class="section-title">Quick Highlights</h2>
+          <ul class="scan-list">
+            <li><strong>Exam:</strong> Programming Technician final qualification score of 94%.</li>
+            <li><strong>Award:</strong> SkillsLatvia 2024 Web Programming - 3rd place.</li>
+            <li><strong>Award:</strong> Liepāja Computer Science Olympiad - 3rd place.</li>
+            <li><strong>Scope:</strong> Frontend, backend, database, and deployment support.</li>
+          </ul>
+        </article>
+
+        <article class="card links" style="margin-top: 10px;">
+          <h2 class="section-title">Socials</h2>
+          <a href="https://github.com/WuzzyLV">GitHub</a>
+          <a href="https://www.linkedin.com/in/reinis-em%C4%ABls-a%C4%BC%C4%BCis-279639299/">LinkedIn</a>
+        </article>
+
+        <article class="card" style="margin-top: 10px;">
+          <h2 class="section-title">Languages</h2>
+          <div class="lang-list">
+            <div class="lang-row"><strong>Latvian</strong><span>Native</span></div>
+            <div class="lang-row"><strong>English</strong><span>Professional working proficiency</span></div>
+          </div>
+        </article>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>

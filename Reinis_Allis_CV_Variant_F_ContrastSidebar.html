@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CV Variant F Contrast</title>
+<style>
+  :root{--dark:#0f172a;--dark2:#111f36;--light:#f8fafc;--paper:#fff;--ink:#111827;--muted:#556176;--line:#dce3ef;--accent:#3b82f6}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#eef2f8;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink)}
+  .page{width:210mm;min-height:297mm;margin:0 auto;background:var(--paper);display:grid;grid-template-columns:72mm 1fr}
+  .left{background:linear-gradient(180deg,var(--dark),var(--dark2));padding:14mm 10mm;color:#dbe7ff}
+  .name{font-size:30px;line-height:1.03;margin:0;color:#fff;font-weight:800}
+  .role{margin-top:6px;color:#8bb6ff;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.7px}
+  .contact{margin-top:13px;font-size:11px;line-height:1.6}
+  .left h3{margin:16px 0 8px;color:#fff;font-size:10px;letter-spacing:1px;text-transform:uppercase}
+  .pill{display:block;background:#162847;border:1px solid #26416e;color:#e6efff;border-radius:8px;padding:6px 8px;font-size:10.6px;margin-bottom:6px;font-weight:600;line-height:1.4}
+  .social a{display:block;color:#9fc4ff;text-decoration:none;font-size:11px;margin-bottom:6px;font-weight:700}
+  .right{padding:14mm 11mm 11mm}
+  .section{margin-bottom:12px}
+  .title{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#1e40af;display:flex;gap:8px;align-items:center}
+  .title:after{content:'';height:1px;background:var(--line);flex:1}
+  p{margin:7px 0 0;font-size:12.2px;line-height:1.5}
+  .job{margin-top:7px;padding:9px;border:1px solid var(--line);border-radius:10px;background:#fbfdff}
+  .job h4{margin:0;font-size:13px}
+  .meta{margin-top:3px;font-size:11.1px;color:var(--muted);font-weight:600}
+  ul{margin:8px 0 0;padding-left:18px}
+  li{font-size:12px;line-height:1.42;margin-bottom:4px}
+  .edu,.award{margin-top:8px;padding:8px;border-left:3px solid #d8e6ff;background:#f9fbff;border-radius:2px}
+  .edu h4,.award h4{margin:0;font-size:12.5px}
+  .edu p,.award p{margin:4px 0 0;font-size:11.2px;color:#4f5d72;line-height:1.45}
+  @page{size:A4;margin:0}
+</style>
+</head>
+<body>
+  <div class="page">
+    <aside class="left">
+      <h1 class="name">Reinis Emīls Aļļis</h1>
+      <div class="role">Junior Full Stack Engineer</div>
+      <div class="contact">Liepāja, Latvia<br/>+371 25851571<br/>reinisemilsa@gmail.com</div>
+
+      <h3>Tech Stack</h3>
+      <span class="pill"><strong>Frontend:</strong> React, Next.js, TypeScript, JavaScript, HTML, CSS</span><span class="pill"><strong>Backend:</strong> Node.js, Express.js, REST APIs, Java (basics), Spring Boot (basics)</span><span class="pill"><strong>Data:</strong> MongoDB, MySQL, SQL</span><span class="pill"><strong>DevOps:</strong> CI/CD pipelines, Linux server maintenance, deployment support</span><span class="pill"><strong>Product:</strong> Shopify ecosystem, e-commerce implementation, Git, Agile workflow</span>
+
+      <h3>Socials</h3>
+      <div class="social">
+        <a href="https://github.com/WuzzyLV">GitHub</a>
+        <a href="https://www.linkedin.com/in/reinis-em%C4%ABls-a%C4%BC%C4%BCis-279639299/">LinkedIn</a>
+      </div>
+
+      <h3>Languages</h3>
+      <span class="pill">Latvian - Native</span>
+      <span class="pill">English - Professional working proficiency</span>
+    </aside>
+
+    <main class="right">
+      <div class="section">
+        <div class="title">Profile</div>
+        <p>Full Stack Engineer with 1.7+ years of professional experience building, maintaining, and deploying web applications. Strong hands-on work across React, Next.js, Node.js/Express, and Shopify-focused e-commerce development. Comfortable owning features from implementation to release and production support.</p>
+      </div>
+
+      <div class="section">
+        <div class="title">Experience</div>
+        <div class="job">
+          <h4>Full Stack Engineer - Libautech</h4>
+          <div class="meta">Sep 2024 - Present | Latvia (On-site)</div>
+          <ul><li>Design, develop, and deploy new web applications.</li><li>Maintain and optimize existing applications for performance and reliability.</li><li>Build frontend features using React and Next.js.</li><li>Contribute to backend/API work with Node.js and Express.</li><li>Support CI/CD pipelines and production server maintenance.</li></ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="title">Education</div>
+        <div class="edu"><h4>Liepāja State Technical School - Programming Technician</h4><p>Sep 2021 - Jun 2025 | Final qualification exam score: 94%</p></div>
+        <div class="edu"><h4>Accenture Bootcamp - Java / Software Engineering</h4><p>Jul 2023 - Aug 2023 | Java OOP, Spring basics, JUnit basics.</p></div>
+      </div>
+
+      <div class="section">
+        <div class="title">Awards & Competition Highlights</div>
+        
+    <div class="award">
+      <h4>SkillsLatvia 2024 - Web Programming (3rd Place)</h4>
+      <p>Built a YouTube-style prototype in 2 days using Laravel + React. Delivered full-stack functionality under strict time constraints and ranked among the top national participants.</p>
+    </div>
+    <div class="award">
+      <h4>Liepāja Computer Science Olympiad (3rd Place)</h4>
+      <p>Led a 3-person team and delivered a complete project using Godot + C#, combining technical implementation with coordination and delivery ownership.</p>
+    </div>
+  
+      </div>
+    </main>
+  </div>
+</body>
+</html>
